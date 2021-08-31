@@ -9,3 +9,6 @@ The app will be useful to users of different age groups, but would be highly ben
 
 <h3>•React - Native</h3>
 <h3>•Expo</h3>
+
+
+<h1>Download the App now:</h1>
