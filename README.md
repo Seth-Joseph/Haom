@@ -7,5 +7,5 @@ By designing the user friendly app, HAOM, I aim to help the general public acces
 
 The app will be useful to users of different age groups, but would be highly beneficial to people above 18years of age. For families, it is a good way of browsing for groceries, planning travels and vacations, managing finances. The emergency services function in the app is useful for everyone including children and old people.
 
-•React - Native
-<h1>•Expo</h1>
+<h3>•React - Native</h3>
+<h3>•Expo</h3>
