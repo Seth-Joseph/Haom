@@ -1,0 +1,121 @@
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  Linking,
+} from 'react-native';
+import { IconButton} from 'react-native-paper';
+
+export default class Shopping extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={{ backgroundColor: '#EDF3F6' }}>
+          <View style={styles.container1}>
+            <IconButton
+              icon="arrow-left"
+              color="white"
+              size={40}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+            />
+          </View>
+        </View>
+        <View>
+          <Text style={styles.title}>Please Select</Text>
+        </View>
+        <View style={styles.try}>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => Linking.openURL('https://www.amazon.in/')}>
+          <View style={styles.row}>
+            <Image source={require('../assets/ama.png')} style={styles.img} />
+            <Text style={styles.text}>Amazon</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => Linking.openURL('https://www.flipkart.com/')}>
+          <View style={styles.row}>
+            <Image source={require('../assets/flip.png')} style={styles.img} />
+            <Text style={styles.text}>Flipkart</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => Linking.openURL('https://www.myntra.com/')}>
+          <View style={styles.row}>
+            <Image source={require('../assets/m.png')} style={styles.img} />
+            <Text style={styles.text}>Myntra</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.btn}
+          onPress={() => Linking.openURL('https://www.jiomart.com/')}>
+          <View style={styles.row}>
+            <Image source={require('../assets/jm.png')} style={styles.img} />
+            <Text style={styles.text}>Jio Mart</Text>
+          </View>
+        </TouchableOpacity>
+        </View>
+        <Text style={styles.blank}></Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#EDF3F6',
+  },
+  container1: {
+    backgroundColor: '#2A2B31',
+    padding: 10,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    paddingTop: 20,
+  },
+  title: {
+    color: 'black',
+    fontFamily: 'sans-serif',
+    fontWeight: 'bold',
+    fontSize: 24,
+    marginTop: 20,
+    marginLeft: 20,
+  },
+  try:{
+    alignItems:'center'
+  },
+  btn: {
+    backgroundColor: '#fff',
+    width: 350,
+    height: 75,
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: '#fff',
+    marginTop: 40,
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'black',
+    fontFamily: 'sans-serif',
+    fontWeight: 'bold',
+    marginTop: 35,
+  },
+  img: {
+    width: 40,
+    height: 40,
+    marginRight: 20,
+  },
+  row: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  blank: {
+    marginTop: 700,
+  },
+});
